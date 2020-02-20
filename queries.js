@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 //connection with database PostgreSQL
-=======
->>>>>>> ef0540b911e60b411008439161a1019443bca576
 const Pool = require("pg").Pool;
 const pool = new Pool({
     user:"postgres",
@@ -10,13 +7,9 @@ const pool = new Pool({
     password:"mata7galinha@",
     port: 5432
 });
-<<<<<<< HEAD
 //-----------------------------------
 
 //query to list all users from table USER
-=======
-
->>>>>>> ef0540b911e60b411008439161a1019443bca576
 const getUsers = (req, res) => {
     pool.query('SELECT * FROM public."USER" ORDER BY id_user ASC', (error, results) => {
         if(error){
@@ -26,10 +19,7 @@ const getUsers = (req, res) => {
     });
 };
 
-<<<<<<< HEAD
 //query to show one user by id
-=======
->>>>>>> ef0540b911e60b411008439161a1019443bca576
 const getUserById = (req, res) => {
     const id_user = parseInt(req.params.id);
 
